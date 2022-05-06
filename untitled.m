@@ -8,10 +8,11 @@ imshow(img)
 
 img = img(:,:,1);
 figure,imshow(img)
+surf(img)
 
 len =size(img,2);
 heigh = size(img,1);
-img = double(img);
+
 macierz = interp2(img);
 figure,imshow(img)
 figure,imshow(macierz)
