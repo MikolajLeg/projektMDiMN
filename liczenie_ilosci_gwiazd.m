@@ -12,7 +12,11 @@ for i = 1:liczba_strzalow
     randX = randsample(a(1),1);
     randY = randsample(a(2),1);
     if img(randX, randY) == 0
-    trafione
+        trafione = trafione + 1;
+        addpoints(trafione_proby,randY, randX)
+        img = zamalo
+    else
+
     end
 
 end
