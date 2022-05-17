@@ -1,6 +1,5 @@
 function [trafione] = liczenie_ilosci_gwiazd(img, liczba_strzalow)
-figure
-imshow(img);
+figure, imshow(img);
 axis on;
 hold on;
 trafione = 0;
@@ -10,6 +9,7 @@ a = size(img);
 
 figure
 for i = 1:liczba_strzalow
+    disp(i)
     randX = randsample(a(1),1);
     randY = randsample(a(2),1);
     if img(randX, randY) == 0
@@ -17,6 +17,7 @@ for i = 1:liczba_strzalow
         addpoints(trafione_proby,randY, randX)
         A = [randX, randY];
         img = zamalowywanie(A, img);
+        figure, imshow(img)
 
     end
 
