@@ -2,7 +2,7 @@
 clear, clc, close all;
 
 img = imread('lepsze_zdjecie.jpg');
-size(img)
+
 img = rgb2gray(img);
 img1 = imbinarize(img);
 img1 =~ img1;
@@ -20,3 +20,7 @@ figure, imshow(img1)
 
 pole = liczenie_pola_gwiazd(10000,2181,2500,img1);
 fprintf("Pole gwiazd w jednostkach^2 = %d", pole)
+
+
+ilosc_gwiazd = liczenie_ilosci_gwiazd(img1,1000);
+fprintf("ilość gwiazd = %d", ilosc_gwiazd)
