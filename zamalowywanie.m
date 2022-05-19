@@ -3,6 +3,7 @@ function [Nowa_Mapa] = zamalowywanie(Punkt,Mapa_nieba)
 %   Detailed explanation goes here
 
 
+
 %załozenie gwdizdy białe
 x = Punkt(1);
 y = Punkt(2);
