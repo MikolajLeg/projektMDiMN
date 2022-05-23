@@ -138,6 +138,9 @@ else
         current(2) = current(2) + 1;
     elseif img(current(1) + 1, current(2)) == 0
         current(1) = current(1) + 1;
+    elseif img(current(1) + 1, current(2) - 1) == 0
+        current(1) = current(1) + 1;
+        current(2) = current(2) - 1;
     end
 end
 
