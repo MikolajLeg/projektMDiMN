@@ -1,15 +1,17 @@
 
+clear, clc, close all;
+tic
+img = imread("minature.PNG");
 
-clear, clc,
-close all
 
-img = imread('lepsze_zdjecie.jpg');
-
+a = size(img);
 img = rgb2gray(img);
+%img = img(1:200,1:2000);
 img1 = imbinarize(img);
 img1 =~ img1;
-figure, imshow(img)
+%figure, imshow(img)
 figure, imshow(img1)
+<<<<<<< HEAD
 
 %B = bwboundaries(img1);
 %text(10,10,strcat('\color{green}Objects Found:',num2str(length(B))));
@@ -153,3 +155,40 @@ imshow(macierz_bisekcji)
 pole = liczenie_pola_gwiazd(100000,2181,2500,img1);
 fprintf("Pole gwiazd w jednostkach^2 = %d", pole)
 
+=======
+b = size(img1);
+%surf(img)
+
+%
+[ilosc_gwiazd] = liczenie_ilosci_gwiazd(img1,10);
+fprintf("ilość gwiazd = %d", ilosc_gwiazd)
+%}
+
+%{
+len = size(img,1);
+wid = size(img,2);
+WektorX = 1:len;
+WektorY = 1:wid;
+
+Gradient_img = grad(img,WektorY,WektorX);
+surf(Gradient_img(:,:,1))
+figure
+surf(Gradient_img(:,:,2))
+figure
+surf(Gradient_img(:,:,1),Gradient_img(:,:,2))
+
+
+Gradient_Gradient = grad(Gradient_img(:,:,1),WektorY, WektorX);
+
+Final_grad = Gradient_Gradient(:,:,2);
+figure
+surf(Final_grad)
+%}
+
+time = toc;
+disp('czas')
+disp(time)
+
+
+%scatter(G(:,2),G(:,1))
+>>>>>>> Oliwier
