@@ -3,9 +3,6 @@ clear, close all
 img = imread('gwiazdy.png');
 imshow(img)
 
-
-
-
 img = img(:,:,1);
 figure,imshow(img)
 surf(img)
