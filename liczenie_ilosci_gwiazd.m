@@ -8,7 +8,7 @@ trafione_proby = animatedline('Color', 'g', "LineStyle","none", "Marker", '+','M
 a = size(img);
 
 
-figure
+%figure
 for i = 1:liczba_strzalow
     randY = randsample(a(1),1);
     randX = randsample(a(2),1);
@@ -17,7 +17,8 @@ for i = 1:liczba_strzalow
         addpoints(trafione_proby,randX, randY)
         A = [randY, randX];
         %img = zamalowywanie(A, img);
-        img = nowe_zamalowywanie(A,img);
+        %img = nowe_zamalowywanie(A,img);
+        img = usuwanie_kwadratow(img, randX, randY);
         %figure, imshow(img)
 
     end

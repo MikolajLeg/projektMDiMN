@@ -1,7 +1,8 @@
 
 clear, clc, close all;
 tic
-img = imread("minature.PNG");
+img = imread("lepsze_zdjecie_jeszcze_mniejsze.PNG");
+c = img(5,8);
 
 a = size(img);
 img = rgb2gray(img);
@@ -9,14 +10,18 @@ img = rgb2gray(img);
 img1 = imbinarize(img);
 img1 =~ img1;
 %figure, imshow(img)
-figure, imshow(img1)
+%figure, imshow(img1)
 b = size(img1);
 %surf(img)
 
 %
-[ilosc_gwiazd] = liczenie_ilosci_gwiazd(img1,1000);
+[ilosc_gwiazd] = liczenie_ilosci_gwiazd(img1,100);
 fprintf("ilość gwiazd = %d", ilosc_gwiazd)
 %}
+
+c = usuwanie_kwadratow(img,72,31);
+
+
 
 %{
 len = size(img,1);
