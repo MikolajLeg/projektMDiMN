@@ -14,7 +14,7 @@ b = size(img1);
 %surf(img)
 
 %
-[ilosc_gwiazd] = liczenie_ilosci_gwiazd(img1,10);
+[ilosc_gwiazd] = liczenie_ilosci_gwiazd(img1,1000);
 fprintf("ilość gwiazd = %d", ilosc_gwiazd)
 %}
 
@@ -39,6 +39,7 @@ figure
 surf(Final_grad)
 %}
 
+disp(" ")
 time = toc;
 disp('czas')
 disp(time)

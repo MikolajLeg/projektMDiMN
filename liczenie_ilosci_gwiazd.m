@@ -17,7 +17,7 @@ for i = 1:liczba_strzalow
         addpoints(trafione_proby,randX, randY)
         A = [randY, randX];
         %img = zamalowywanie(A, img);
-        img2 = nowe_zamalowywanie(A,img);
+        img = nowe_zamalowywanie(A,img);
         %figure, imshow(img)
 
     end
